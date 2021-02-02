@@ -66,6 +66,8 @@ EEPROM_24LC256_stats EEPROM_24LC256_I2C_write_uchar ( uint8_t i2c_address, uint8
     
     EEPROM_24LC256_delay_ms(EEPROM_24LC256_MIN_DELAY_BETWEEN_OPERATIONS);
     
+    EEPROM_24LC256_delay_ms(5);
+    
     return EEPROM_24LC256_OK;
 
 }
@@ -113,6 +115,8 @@ EEPROM_24LC256_stats EEPROM_24LC256_I2C_read_uchar ( uint8_t i2c_address, uint8_
     if( status != EEPROM_24LC256_OK ) return status;
     
     EEPROM_24LC256_delay_ms(EEPROM_24LC256_MIN_DELAY_BETWEEN_OPERATIONS);
+    
+    EEPROM_24LC256_delay_ms(5);
     
     return EEPROM_24LC256_OK;
     
